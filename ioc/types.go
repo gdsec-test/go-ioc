@@ -40,6 +40,9 @@ const (
 	CAPEC
 	CWE
 	CPE
+	Mitre
+	AWSHostName
+	GoDaddyHostName
 )
 
 // Types of all IOCs
@@ -59,6 +62,9 @@ var Types = []Type{
 	CAPEC,
 	CWE,
 	CPE,
+	Mitre,
+	AWSHostName,
+	GoDaddyHostName,
 }
 
 // -- []IOC helpers --
