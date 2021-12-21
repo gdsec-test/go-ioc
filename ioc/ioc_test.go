@@ -120,12 +120,54 @@ func TestParseIOC(t *testing.T) {
 		{ // Must fail
 			"cpe:v2.3:a:microsoft-teams:teams_security:115.45.61.0:*:*:*:*", nil,
 		},
-		// Mitre
+		// Mitre Matrix
 		{ // Must pass
-			"S0066", &IOC{Type: Mitre, IOC: "S0066"},
+			"MA1057.003", &IOC{Type: MitreMatrix, IOC: "MA1057.003"},
 		},
 		{ // Must fail
-			"T1100-456", nil,
+			"MA1057-003", nil,
+		},
+		// Mitre Tactic
+		{ // Must pass
+			"TA1122.001", &IOC{Type: MitreTactic, IOC: "TA1122.001"},
+		},
+		{ // Must fail
+			"TA-1122", nil,
+		},
+		// Mitre Subtechnique
+		{ // Must pass
+			"t6014", &IOC{Type: MitreSubtechnique, IOC: "t6014"},
+		},
+		{ // Must fail
+			"T6014.00089", nil,
+		},
+		// Mitre Mitigation
+		{ // Must pass
+			"M4002.003", &IOC{Type: MitreMitigation, IOC: "M4002.003"},
+		},
+		{ // Must fail
+			"MT4002.00011", nil,
+		},
+		// Mitre Group
+		{ // Must pass
+			"G1057", &IOC{Type: MitreGroup, IOC: "G1057"},
+		},
+		{ // Must fail
+			"G10571.001", nil,
+		},
+		// Mitre Detection
+		{ // Must pass
+			"DS2014", &IOC{Type: MitreDetection, IOC: "DS2014"},
+		},
+		{ // Must fail
+			"DS-2014", nil,
+		},
+		// Mitre Software
+		{ // Must pass
+			"S0066", &IOC{Type: MitreSoftware, IOC: "S0066"},
+		},
+		{ // Must fail
+			"S1100-456", nil,
 		},
 		// AWS Host Name
 		{ // Must pass

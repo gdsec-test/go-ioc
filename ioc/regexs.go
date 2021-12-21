@@ -36,7 +36,13 @@ var iocRegexes = map[Type]*regexp.Regexp{
 	// support for URI and WFN CPE 2.2 and 2.3 bindings
 	CPE: regexp.MustCompile(`(?i)cpe(:2[.]3)?:[/]?[aoh*\-](:[?*]?([a-z0-9\-._]|([\\][\\?*!"#$%&'()+,/:;<=>@[\]^{|}~])|[%~])*[?*\-]?){0,5}(:([a-z]{2,3}(-([a-z]{2}|[0-9]{3}))?)|[*\-])?(:[?*]?([a-z0-9\-._]|([\\][\\?*!"#$%&'()+,/:;<=>@[\]^{|}~])|[%~])*[?*\-]?){0,5}`),
 	// Mitre Classifications
-	Mitre: regexp.MustCompile(`^(?P<concept>M(A)?|T(A)?|G|S)\d{4}(\.\d{3})?$`),
+	MitreMatrix:       regexp.MustCompile(`^(?P<concept>(?i)MA)\d{4}(\.\d{3})?$`),
+	MitreTactic:       regexp.MustCompile(`^(?P<concept>(?i)TA)\d{4}(\.\d{3})?$`),
+	MitreSubtechnique: regexp.MustCompile(`^(?P<concept>(?i)T)\d{4}(\.\d{3})?$`),
+	MitreMitigation:   regexp.MustCompile(`^(?P<concept>(?i)M)\d{4}(\.\d{3})?$`),
+	MitreGroup:        regexp.MustCompile(`^(?P<concept>(?i)G)\d{4}(\.\d{3})?$`),
+	MitreSoftware:     regexp.MustCompile(`^(?P<concept>(?i)S)\d{4}(\.\d{3})?$`),
+	MitreDetection:    regexp.MustCompile(`^(?P<concept>(?i)DS)\d{4}(\.\d{3})?$`),
 	// AWS Host Names
 	AWSHostName: regexp.MustCompile(`ip-(\d+-)+\d+.*internal`),
 	// Godaddy Host Names
