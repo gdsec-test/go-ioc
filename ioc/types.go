@@ -42,6 +42,7 @@ const (
 	CPE
 	MitreMatrix
 	MitreTactic
+	MitreTechnique
 	MitreSubtechnique
 	MitreMitigation
 	MitreGroup
@@ -70,6 +71,7 @@ var Types = []Type{
 	CPE,
 	MitreMatrix,
 	MitreTactic,
+	MitreTechnique,
 	MitreSubtechnique,
 	MitreMitigation,
 	MitreGroup,

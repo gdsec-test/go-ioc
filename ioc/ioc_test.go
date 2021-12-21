@@ -134,12 +134,19 @@ func TestParseIOC(t *testing.T) {
 		{ // Must fail
 			"TA-1122", nil,
 		},
-		// Mitre Subtechnique
+		// Mitre Technique
 		{ // Must pass
-			"t6014", &IOC{Type: MitreSubtechnique, IOC: "t6014"},
+			"t6014", &IOC{Type: MitreTechnique, IOC: "t6014"},
 		},
 		{ // Must fail
-			"T6014.00089", nil,
+			"T6014.001", nil,
+		},
+		// Mitre Subtechnique
+		{ // Must pass
+			"T6014.001", &IOC{Type: MitreSubtechnique, IOC: "T6014.001"},
+		},
+		{ // Must fail
+			"T6014", nil,
 		},
 		// Mitre Mitigation
 		{ // Must pass

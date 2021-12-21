@@ -38,7 +38,8 @@ var iocRegexes = map[Type]*regexp.Regexp{
 	// Mitre Classifications
 	MitreMatrix:       regexp.MustCompile(`^(?P<concept>(?i)MA)\d{4}(\.\d{3})?$`),
 	MitreTactic:       regexp.MustCompile(`^(?P<concept>(?i)TA)\d{4}(\.\d{3})?$`),
-	MitreSubtechnique: regexp.MustCompile(`^(?P<concept>(?i)T)\d{4}(\.\d{3})?$`),
+	MitreTechnique:    regexp.MustCompile(`^(?P<concept>(?i)T)\d{4}$`),
+	MitreSubtechnique: regexp.MustCompile(`^(?P<concept>(?i)T)\d{4}(\.\d{3})$`),
 	MitreMitigation:   regexp.MustCompile(`^(?P<concept>(?i)M)\d{4}(\.\d{3})?$`),
 	MitreGroup:        regexp.MustCompile(`^(?P<concept>(?i)G)\d{4}(\.\d{3})?$`),
 	MitreSoftware:     regexp.MustCompile(`^(?P<concept>(?i)S)\d{4}(\.\d{3})?$`),
