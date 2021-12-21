@@ -24,5 +24,5 @@ require (
 	github.com/vertoforce/streamregex v0.0.0-20200126210557-5b6afd4f6723 // indirect
 	golang.org/x/net v0.0.0-20211015210444-4f30a5c0130f // indirect
 	golang.org/x/text v0.3.7 // indirect
-	gopkg.in/yaml.v2 v2.2.2 // indirect
+	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
