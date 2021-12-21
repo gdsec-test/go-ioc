@@ -74,3 +74,17 @@ The finding IOCs in readers uses these two libraries:
 - Defang() *IOC
 - Fang() *IOC
 - IsFanged() bool
+
+## Dependencies
+
+Stringer is required by "go generate" while adding new types to types.go. Install it using:
+
+```go
+go install golang.org/x/tools/cmd/stringer
+```
+
+Run go:generate to automatically update type_string.go after updating types.go:
+
+```go
+go generate types.go
+```
