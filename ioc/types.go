@@ -40,7 +40,13 @@ const (
 	CAPEC
 	CWE
 	CPE
-	Mitre
+	MitreMatrix
+	MitreTactic
+	MitreSubtechnique
+	MitreMitigation
+	MitreGroup
+	MitreSoftware
+	MitreDetection
 	AWSHostName
 	GoDaddyHostName
 )
@@ -62,7 +68,13 @@ var Types = []Type{
 	CAPEC,
 	CWE,
 	CPE,
-	Mitre,
+	MitreMatrix,
+	MitreTactic,
+	MitreSubtechnique,
+	MitreMitigation,
+	MitreGroup,
+	MitreSoftware,
+	MitreDetection,
 	AWSHostName,
 	GoDaddyHostName,
 }
