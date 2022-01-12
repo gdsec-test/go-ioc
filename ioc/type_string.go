@@ -33,12 +33,12 @@ func _() {
 	_ = x[MitreSoftware-22]
 	_ = x[MitreDetection-23]
 	_ = x[AWSHostName-24]
-	_ = x[GoDaddyHostName-25]
+	_ = x[HostName-25]
 }
 
-const _Type_name = "UnknownBitcoinMD5SHA1SHA256SHA512DomainEmailIPv4IPv6URLFileCVECAPECCWECPEMitreMatrixMitreTacticMitreTechniqueMitreSubtechniqueMitreMitigationMitreGroupMitreSoftwareMitreDetectionAWSHostNameGoDaddyHostName"
+const _Type_name = "UnknownBitcoinMD5SHA1SHA256SHA512DomainEmailIPv4IPv6URLFileCVECAPECCWECPEMitreMatrixMitreTacticMitreTechniqueMitreSubtechniqueMitreMitigationMitreGroupMitreSoftwareMitreDetectionAWSHostNameHostName"
 
-var _Type_index = [...]uint8{0, 7, 14, 17, 21, 27, 33, 39, 44, 48, 52, 55, 59, 62, 67, 70, 73, 84, 95, 109, 126, 141, 151, 164, 178, 189, 204}
+var _Type_index = [...]uint8{0, 7, 14, 17, 21, 27, 33, 39, 44, 48, 52, 55, 59, 62, 67, 70, 73, 84, 95, 109, 126, 141, 151, 164, 178, 189, 197}
 
 func (i Type) String() string {
 	if i < 0 || i >= Type(len(_Type_index)-1) {
