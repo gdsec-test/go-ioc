@@ -49,7 +49,7 @@ const (
 	MitreSoftware
 	MitreDetection
 	AWSHostName
-	HostName
+	GoDaddyHostName
 )
 
 // Types of all IOCs
@@ -78,7 +78,7 @@ var Types = []Type{
 	MitreSoftware,
 	MitreDetection,
 	AWSHostName,
-	HostName,
+	GoDaddyHostName,
 }
 
 // -- []IOC helpers --

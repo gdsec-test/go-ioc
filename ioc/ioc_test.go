@@ -185,7 +185,7 @@ func TestParseIOC(t *testing.T) {
 		},
 		// GoDaddy Host Name
 		{ // Must pass
-			"test-app-cloud.nyc3.gdg", &IOC{Type: HostName, IOC: "test-app-cloud.nyc3.gdg"},
+			"test-app-cloud.nyc3.gdg", &IOC{Type: GoDaddyHostName, IOC: "test-app-cloud.nyc3.gdg"},
 		},
 		{ // Must fail
 			"my-test.app.cloud.gdg.167", nil,

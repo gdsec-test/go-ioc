@@ -47,5 +47,5 @@ var iocRegexes = map[Type]*regexp.Regexp{
 	// AWS Host Names
 	AWSHostName: regexp.MustCompile(`ip-(\d+-)+\d+.*internal`),
 	// Godaddy Host Names
-	HostName: regexp.MustCompile(`((\w|-)+\.?)+\.gdg`),
+	GoDaddyHostName: regexp.MustCompile(`((\w|-)+\.?)+\.gdg`),
 }
