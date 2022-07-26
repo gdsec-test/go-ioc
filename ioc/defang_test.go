@@ -146,6 +146,10 @@ func TestIsFanged(t *testing.T) {
 		// Never fanged types
 		// Bitcoin
 		{&IOC{"bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq", Bitcoin}, false},
+		//Ethereum
+		{&IOC{"0x52908400098527886E0F7030069857D2E4169EE7", Ethereum}, false},
+		//Monero
+		{&IOC{"4AfUP827TeRZ1cck3tZThgZbRCEwBrpcJTkA1LCiyFVuMH4b5y59bKMZHGb9y58K3gSjWDCBsB4RkGsGDhsmMG5R2qmbLeW", Monero}, false},
 		// Hashes
 		{&IOC{"874058e8d8582bf85c115ce319c5b0af", MD5}, false},
 		// Files n/a

@@ -113,6 +113,8 @@ func (ioc *IOC) Fang() *IOC {
 // IsFanged Takes an IOC and returns if it is fanged.  Non fanging types (bitcoin, hashes, file, cve) are always determined to not be fanged
 func (ioc *IOC) IsFanged() bool {
 	if ioc.Type == Bitcoin ||
+		ioc.Type == Ethereum ||
+		ioc.Type == Monero ||
 		ioc.Type == MD5 ||
 		ioc.Type == SHA1 ||
 		ioc.Type == SHA256 ||

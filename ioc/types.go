@@ -57,6 +57,8 @@ const (
 // Types of all IOCs
 var Types = []Type{
 	Bitcoin,
+	Ethereum,
+	Monero,
 	MD5,
 	SHA1,
 	SHA256,
