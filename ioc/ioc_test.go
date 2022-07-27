@@ -21,6 +21,20 @@ func TestParseIOC(t *testing.T) {
 		{ // Must fail
 			"1BvBMSEY$tWetqTFn5.4m4GFg7xJaNVN2", nil,
 		},
+		// Ethereum
+		{ // Must pass
+			"0x52908400098527886E0F7030069857D2E4169EE7", &IOC{Type: Ethereum, IOC: "0x52908400098527886E0F7030069857D2E4169EE7"},
+		},
+		{ // Must fail
+			"0x5290840009#$#8527886E0F7030069857*#^#$4169EE7", nil,
+		},
+		// Monero
+		{ // Must pass
+			"4AfUP827TeRZ1cck3tZThgZbRCEwBrpcJTkA1LCiyFVuMH4b5y59bKMZHGb9y58K3gSjWDCBsB4RkGsGDhsmMG5R2qmbLeW", &IOC{Type: Bitcoin, IOC: "4AfUP827TeRZ1cck3tZThgZbRCEwBrpcJTkA1LCiyFVuMH4b5y59bKMZHGb9y58K3gSjWDCBsB4RkGsGDhsmMG5R2qmbLeW"},
+		},
+		{ // Must fail
+			"4AfUP8;*^$27TeRZ1cck3tZThgZbRCEwBrpcJT.@#$ZHGb9y58K3gSjWDCBsB4RkGsGDhG5R2qmbLeW", nil,
+		},
 		// Email
 		{ // Must pass
 			"test-me123(at)test[.]com", &IOC{Type: Email, IOC: "test-me123(at)test[.]com"},

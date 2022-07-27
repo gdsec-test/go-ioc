@@ -10,8 +10,11 @@ import (
 
 // iocRegexes List of regexes corresponding to a IOC
 var iocRegexes = map[Type]*regexp.Regexp{
-	// Bitcoin
+	// Crypto Currencies
 	Bitcoin: regexp.MustCompile(`(?:^|[ '":])((bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39})`),
+	Ethereum: regexp.MustCompile(`^0x[a-fA-F0-9]{40}$`),
+	Monero: regexp.MustCompile(`^4([0-9AB]{1})([0-9a-zA-Z]{93})$`),
+
 	// Hashes
 	MD5:    regexp.MustCompile(`\b[A-Fa-f0-9]{32}\b`),
 	SHA1:   regexp.MustCompile(`\b[A-Fa-f0-9]{40}\b`),

@@ -26,6 +26,8 @@ type Type int
 const (
 	Unknown Type = iota
 	Bitcoin
+	Ethereum
+	Monero
 	MD5
 	SHA1
 	SHA256
@@ -55,6 +57,8 @@ const (
 // Types of all IOCs
 var Types = []Type{
 	Bitcoin,
+	Ethereum,
+	Monero,
 	MD5,
 	SHA1,
 	SHA256,
