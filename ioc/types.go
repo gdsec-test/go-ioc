@@ -50,6 +50,8 @@ const (
 	MitreDetection
 	AWSHostName
 	GoDaddyHostName
+	FileRef
+	FileBase64
 )
 
 // Types of all IOCs
@@ -79,6 +81,8 @@ var Types = []Type{
 	MitreDetection,
 	AWSHostName,
 	GoDaddyHostName,
+	FileRef,
+	FileBase64,
 }
 
 // -- []IOC helpers --
