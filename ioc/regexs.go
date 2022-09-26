@@ -28,7 +28,7 @@ var iocRegexes = map[Type]*regexp.Regexp{
 	// URLs
 	URL: regexp.MustCompile(`(\b((http|https|hxxp|hxxps|nntp|ntp|rdp|sftp|smtp|ssh|tor|webdav|xmpp)[[([\{]?\:[])]?\/\/[])]?[\S]+)\b\/?)`),
 	// Files
-	File: regexp.MustCompile(`(([\w\-]+)\.)+(docx|doc|csv|pdf|xlsx|xls|rtf|txt|pptx|ppt|pages|keynote|numbers|exe|dll|jar|flv|swf|jpeg|jpg|gif|png|tiff|bmp|plist|app|pkg|html|htm|php|jsp|asp|zip|zipx|7z|rar|tar|gz)`),
+	//File: regexp.MustCompile(`(([\w\-]+)\.)+(docx|doc|csv|pdf|xlsx|xls|rtf|txt|pptx|ppt|pages|keynote|numbers|exe|dll|jar|flv|swf|jpeg|jpg|gif|png|tiff|bmp|plist|app|pkg|html|htm|php|jsp|asp|zip|zipx|7z|rar|tar|gz)`),
 	// Utility
 	CVE:   regexp.MustCompile(`(?i)CVE-\d{4}-\d{4,7}`),
 	CAPEC: regexp.MustCompile(`(?i)CAPEC-\d+`),

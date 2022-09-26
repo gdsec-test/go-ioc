@@ -86,12 +86,14 @@ func TestParseIOC(t *testing.T) {
 			"www.google.com/", nil,
 		},
 		// File
-		{ // Must pass
-			"test.me-12345.exe", &IOC{Type: File, IOC: "test.me-12345.exe"},
-		},
-		{ // Must fail
-			".test-file.pdf", nil,
-		},
+		/*
+			{ // Must pass
+				"test.me-12345.exe", &IOC{Type: File, IOC: "test.me-12345.exe"},
+			},
+			{ // Must fail
+				".test-file.pdf", nil,
+			},
+		*/
 		// CVE
 		{ // Must pass
 			"CVE-2021-41265", &IOC{Type: CVE, IOC: "CVE-2021-41265"},
